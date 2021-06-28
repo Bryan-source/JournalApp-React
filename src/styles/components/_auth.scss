@@ -1,0 +1,65 @@
+
+.auth__main {
+    align-items: center;
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.auth__box-container {
+    background-color: white;
+    box-shadow: 0px 3px $dark-grey;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+}
+
+.auth__title {
+    /* darken toma un color y lo hace más oscuro a travéz del amount */
+    color: darken($color: $primary, $amount: 20);
+    margin-bottom: 20px;
+}
+
+.auth__input {
+    color: $dark-grey;
+    border: 0px;
+    border-bottom: 1px solid $light-grey;
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 20px;
+    width: 100%;
+
+    /* Transition al seleccionar el input hace que el focus sea lento */
+    transition: border-bottom .3s ease;
+
+    /*  & se utiliza para no usar .auth__input:focus{} y de este modo hacer mas fácil de entender el código */
+    &:focus {
+        border-bottom: 1px solid $primary;
+        /* Elimina el subrayado por default al hacer focus */
+        outline: none;
+    }
+}
+
+.auth__social-networks {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.auth__alert-error {
+    //background-color: lighten($color: $primary, $amount: 20);
+    border-radius: 5px;
+    border: 1px solid red;
+    color: red;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 5px;
+}
